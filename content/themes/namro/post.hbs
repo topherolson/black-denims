@@ -1,0 +1,18 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+{{#post}}
+<main id="main-content" class="single">
+
+    {{!-- Location: partials/post/post-single.hbs --}}
+    {{> "post/post-single"}}
+
+    {{!-- Location: partials/post/post-comment --}}
+    {{> "post/post-comment"}}
+
+    {{!-- Location: partials/post/post-navigation --}}
+    {{> "post/post-navigation"}}
+    
+</main>
+{{/post}}

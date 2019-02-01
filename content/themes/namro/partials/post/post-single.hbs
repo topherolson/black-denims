@@ -1,0 +1,21 @@
+<article id="post" class="post-{{comment_id}} {{post_class}}">
+	
+	{{!-- Location: partials/post/post-title.hbs --}}
+	{{> "post/post-title"}}
+
+	<div class="inner">
+		<div class="post-content">
+			{{content}}
+
+			{{!-- Location: partials/post/post-meta.hbs --}}
+			{{> "post/post-meta"}}
+
+			{{!-- Location: partials/post/post-sharing.hbs --}}
+			{{> "post/post-sharing"}}
+
+			{{!-- Location: partials/post/post-author.hbs --}}
+			{{> "post/post-author"}}
+		</div>
+	</div>
+
+</article>

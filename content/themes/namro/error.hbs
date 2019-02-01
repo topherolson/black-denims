@@ -1,0 +1,45 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- The main content area --}}
+<main id="main-content" class="single">
+    <div class="container">
+
+        <article class="post-error">
+            
+            <div class="inner">
+                <div class="post-content">
+                    
+                    <section class="error-message">
+                        <span class="error-alt">{{t "Error"}}</span>
+                        <h1 class="error-code">{{code}}</h1>
+                        <p class="error-description">{{message}}</p>
+                        <a class="error-link" href="{{@blog.url}}">{{t "Go to the front page →"}}</a>
+                    </section>
+
+                    {{#if errorDetails}}
+                    <section class="error-stack">
+                        <h3>Theme errors</h3>
+                        <ul class="error-stack-list">
+                            {{#each errorDetails}}
+                                <li>
+                                    <em class="error-stack-function">{{{rule}}}</em>
+
+                                    {{#each failures}}
+                                        <p><span class="error-stack-file">Ref: {{ref}}</span></p>
+                                        <p><span class="error-stack-file">Message: {{message}}</span></p>
+                                    {{/each}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+
+                </div>
+            </div>
+
+        </article>    
+        
+    </div>
+
+</main>

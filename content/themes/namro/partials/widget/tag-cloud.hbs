@@ -1,0 +1,10 @@
+{{!-- Tag cloud widget for footer area --}}
+<h4  class="widget-title">{{t "Tag Cloud"}}</h4>
+
+{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+<div class="tagcloud">
+    
+    {{#foreach tags}}<a href="/tag/{{slug}}">{{name}}</a>{{/foreach}}
+
+</div>
+{{/get}}

@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="post-nav">
+
+		{{#prev_post}}
+		<div class="post-nav-item post-prev">
+			<span class="arrow-icon ion-ios-arrow-thin-left"></span>
+			<span>{{t "Prev"}}</span>
+			<h3><a class="post-nav-title" href="{{url}}">{{title}}</a></h3>
+		</div>
+		{{/prev_post}}
+
+
+		{{#next_post}}
+		<div class="post-nav-item post-next">
+			<span class="arrow-icon ion-ios-arrow-thin-right"></span>
+			<span>{{t "Next"}}</span>
+			<h3><a class="post-nav-title" href="{{url}}">{{title}}</a></h3>
+		</div>
+		{{/next_post}}
+
+	</div>
+</div>

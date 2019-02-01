@@ -1,0 +1,19 @@
+{{#foreach authors}}
+<div class="post-author">
+
+	<div class="author-avatar">
+		<img class="avatar avatar-80" src="{{img_url profile_image absolute="true"}}">
+	</div>
+
+	<div class="author-desc">
+		<span>{{t "Written by"}}</span>
+		<h3 class="author-name"><a href="{{url}}" title="{{name}}" class="author-{{comment_id}} {{slug}}">{{name}}</a></h3>
+		{{#if bio}}
+            <p class="author-bio">{{bio}} <a class="author-link" href="{{url}}">{{t "View all posts by {name}" name=name}}</a></p>
+        {{else}}
+            <p class="author-bio">{{{t "Read <a href='{href}'>more posts</a> by this author." href=(url)}}}</p>
+        {{/if}}
+	</div>
+
+</div>
+{{/foreach}}

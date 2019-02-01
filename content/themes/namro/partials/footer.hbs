@@ -1,0 +1,37 @@
+<footer id="footer" class="site-footer">
+    <div class="container">
+        
+        <div class="footer-wraps">
+
+            <div class="footer-wrap-left footer-wrap">
+                <div class="footer-widget">
+
+                    {{!-- Location: partials/widget/recent-post.hbs --}}
+                    {{> "widget/recent-posts"}}
+                
+                </div>
+            </div>
+            
+            <div class="footer-wrap-center footer-wrap">
+                <div class="footer-widget"> 
+
+                    {{!-- Location: partials/widget/tag-cloud.hbs --}}
+                    {{> "widget/tag-cloud"}}
+
+                </div>
+            </div>
+            
+            <div class="footer-wrap-right footer-wrap">
+                <div class="footer-widget">
+
+                    {{!-- Location: partials/widget/subscriber.hbs --}}
+                    {{> "widget/subscriber"}}
+
+                </div>  
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="copyright">{{{t "Copyright &copy;"}}} {{date format="YYYY"}} - <a href="{{@blog.url}}">{{@blog.title}}</a></div>
+</footer>

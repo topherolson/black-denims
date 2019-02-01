@@ -1,0 +1,14 @@
+{{!-- Recent posts widget for footer area --}}
+<h4  class="widget-title">{{t "Recent Posts"}}</h4>
+
+{{#get "posts" limit="5"}}  
+<ul> 
+
+    {{#foreach posts}}
+        <li>
+            <a href="{{url}}">{{title}}</a>
+        </li>
+    {{/foreach}}
+
+</ul>
+{{/get}}

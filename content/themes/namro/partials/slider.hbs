@@ -1,0 +1,26 @@
+{{^is "paged"}}
+<div id="namro-slider">
+
+	<div class="overlay"></div>
+
+	{{#get "posts" filter="featured:true" include="authors" limit="all" as |featured|}}
+	{{#foreach featured}}
+	<div class="slide-item" data-current-slide="{{@index}}">
+
+		<div class="slide-content">
+			<h2 class="slide-post-title"><a href="{{url}}">{{title}}</a></h2>
+			<div class="slide-post-meta entry-meta">
+				{{#foreach authors}}
+				<span class="byauthor">{{{t "By <a href='{href}'>{name}</a>" href=(url) name=name}}}</span>
+				{{/foreach}}
+			</div>
+		</div>
+
+	</div>
+
+	<div class="slide-img has-bg" data-current-slide="{{@index}}" style="background-image: url({{feature_image}});"></div>
+	{{/foreach}}
+	{{/get}}
+
+</div>
+{{/is}}

@@ -1,0 +1,24 @@
+<div class="post-sharing">
+	<ul class="sharing-list">
+		<li>
+			<a class="facebook-share" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'share-facebook', 'width=550, height=296');return false;">
+				<span class="ion-social-facebook"></span>
+				<i class="share-count">{{t "Share"}}</i>
+			</a>
+		</li>
+
+		<li>
+			<a class="twitter-share" href="https://www.twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}" onclick="window.open(this.href, 'share-twitter', 'width=550, height=235');return false;">
+				<span class="ion-social-twitter"></span>
+				<i class="share-count">{{t "Tweet"}}</i>
+			</a>
+		</li>
+
+		<li>
+			<a class="pinterest-share" href="https://www.pinterest.com/pin/create/button/?url={{url absolute="true"}}&description={{encode title}}&media={{img_url feature_image absolute="true"}}" onclick="window.open(this.href, 'share-pinterest', 'width=550, height=335');return false;">
+				<span class="ion-social-pinterest"></span>
+				<i class="share-count">{{t "Pin it"}}</i>
+			</a>
+		</li>
+	</ul>
+</div>

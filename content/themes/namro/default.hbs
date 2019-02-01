@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+<head>
+
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Google fonts --}}
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:300,500|Montserrat:400,700|Open+Sans:400,700,400italic,700italic">
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/ionicons.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/slick.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+    
+    {{!-- This tag outputes SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+
+</head>
+<body class="{{body_class}}">
+
+    {{!-- Location: partials/header.hbs --}}
+    {{> "header"}}
+
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- Location: partials/footer.hbs --}}
+    {{> "footer"}}
+
+    {{!-- #Scripts --}}
+    {{!-- jQuery v3.2.1 --}}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    {{!-- slick.js --}}
+    <script type="text/javascript" src="{{asset "js/slick.min.js"}}"></script>
+
+    {{!-- ghosthunter.js --}}
+    <script type="text/javascript" src="{{asset "js/jquery.ghosthunter.js"}}"></script>
+
+    {{!-- fitvids.js --}}
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+
+    {{!-- main script js --}}
+    <script type="text/javascript" src="{{asset "js/namro.js"}}"></script>
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
+
+</body>
+</html>
