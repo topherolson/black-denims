@@ -1094,7 +1094,7 @@ a:active {
 #namro-slider {
     background-color: #eee;
     display: block;
-    margin: 0 0 40px;
+    margin: 40px 0 40px;
     position: relative;
 	visibility: hidden;
     z-index: 1;
