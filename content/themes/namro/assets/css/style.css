@@ -1909,7 +1909,7 @@ body.sidebar-slide .sidebar-overlay {
 /* subscribe form */
 .subscribe-form {
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0;
 }
 .subscribe-form input {
   margin: 0 0 10px;
