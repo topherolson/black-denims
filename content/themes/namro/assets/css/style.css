@@ -389,20 +389,15 @@ h3,
 h4,
 h5,
 h6 {
-	
-
-
-
-
     text-rendering: optimizeLegibility;
-
+    font-weight: normal;
 }
 
 h1 { font-size: 30px; }
 
 h2 { font-size: 26px; }
 
-h3 { font-size: 14px; text-align: center}
+h3 { font-size: 14px; text-align: center;}
 
 h4 { font-size: 14px; text-align: center}
 
