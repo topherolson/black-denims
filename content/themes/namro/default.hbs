@@ -23,17 +23,18 @@
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-
-    $('.post-content a').each(function() {
-    var a = new RegExp('/' + window.location.host + '/');
-    if(!a.test(this.href)) {
-        $(this).click(function(event) {
-            event.preventDefault();
-            event.stopPropagation();
-            window.open(this.href, '_blank');
+    <script>
+        $('.post-content a').each(function() {
+        var a = new RegExp('/' + window.location.host + '/');
+        if(!a.test(this.href)) {
+            $(this).click(function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(this.href, '_blank');
+            });
+            }
         });
-    }
-});
+    </script>
 
 </head>
 <body class="{{body_class}}">
