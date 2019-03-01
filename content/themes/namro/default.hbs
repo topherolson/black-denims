@@ -24,11 +24,7 @@
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript">
-  $(document).ready(function(){
-    $('a[href^="http://"], a[href^="https://"]').not('a[href*=blackdenims\\.com]').attr('target','_blank');
-  });
-</script>
+
 
 
 </head>
@@ -64,6 +60,10 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
-
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('a[href^="http://"], a[href^="https://"]').not('a[href*=blackdenims\\.com]').attr('target','_blank');
+      });
+    </script>
 </body>
 </html>
