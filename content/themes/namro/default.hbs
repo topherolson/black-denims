@@ -23,18 +23,13 @@
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-    <script>
-        $('.post-content a').each(function() {
-        var a = new RegExp('/' + window.location.host + '/');
-        if(!a.test(this.href)) {
-            $(this).click(function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                window.open(this.href, '_blank');
-            });
-            }
-        });
-    </script>
+    <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+  $(document).ready(function(){
+    $('a[href^="http://"], a[href^="https://"]').not('a[href*=blackdenims\\.com]').attr('target','_blank');
+  });
+</script>
+
 
 </head>
 <body class="{{body_class}}">
