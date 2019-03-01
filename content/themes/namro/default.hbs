@@ -20,9 +20,20 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
-    
+
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
+
+    $('.post-content a').each(function() {
+    var a = new RegExp('/' + window.location.host + '/');
+    if(!a.test(this.href)) {
+        $(this).click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            window.open(this.href, '_blank');
+        });
+    }
+});
 
 </head>
 <body class="{{body_class}}">
