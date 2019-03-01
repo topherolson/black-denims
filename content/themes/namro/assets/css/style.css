@@ -375,11 +375,7 @@ h6,
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
 	color: #111;
     font-weight: bold;
 	letter-spacing: 0.2rem;
@@ -389,11 +385,24 @@ h6 {
 	text-transform: uppercase;
 }
 
+h3,
+h4,
+h5,
+h6 {
+	
+
+
+
+
+    text-rendering: optimizeLegibility;
+
+}
+
 h1 { font-size: 30px; }
 
 h2 { font-size: 26px; }
 
-h3 { font-size: 22px; }
+h3 { font-size: 14px; text-align: center}
 
 h4 { font-size: 14px; text-align: center}
 
