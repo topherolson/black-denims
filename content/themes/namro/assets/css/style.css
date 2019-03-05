@@ -1491,6 +1491,13 @@ a:active {
     float: right;
 }
 
+@media screen and (max-width: 460px) {
+    .sidebar-post
+        {
+            display: none;
+        }
+}
+
 .post-content .excerpt {
 	font-size: 20px;
 }
