@@ -785,7 +785,7 @@ a:active {
     visibility: hidden;
 }
 .inner {
-	max-width: 1000px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -1487,7 +1487,7 @@ a:active {
 }
 
 .sidebar-post {
-    width: 200px;
+    width: 300px;
     float: right;
 }
 
