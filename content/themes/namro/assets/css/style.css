@@ -1482,7 +1482,7 @@ a:active {
 }
 .post-content {
     padding: 0 1%;
-    width: 700px;
+    width: 70%;
     float: left;
 }
 
@@ -1494,7 +1494,7 @@ a:active {
 }
 
 .sidebar-post {
-    width: 300px;
+    width: 30%;
     float: right;
 }
 
