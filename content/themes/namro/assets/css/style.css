@@ -1483,9 +1483,14 @@ a:active {
 .post-content {
     padding: 0 8%;
     width: 750px;
-
-
+    float: left;
 }
+
+.sidebar {
+    width: 200px;
+    float: right;
+}
+
 .post-content .excerpt {
 	font-size: 20px;
 }
