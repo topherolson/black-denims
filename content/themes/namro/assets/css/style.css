@@ -1486,6 +1486,13 @@ a:active {
     float: left;
 }
 
+@media screen and (max-width: 460px) {
+    .post-content{
+        position: relative;
+        width: 100%;
+    }
+}
+
 .sidebar-post {
     width: 300px;
     float: right;
