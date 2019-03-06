@@ -1497,6 +1497,7 @@ a:active {
 .sidebar-post {
     width: 30%;
     float: right;
+    border: 1px solid black;
 }
 
 .sidebar-post h3{
