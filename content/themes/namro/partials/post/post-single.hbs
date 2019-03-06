@@ -17,12 +17,20 @@
 			<!-- {{> "post/post-author"}} -->
 		</div>
 		<div class="sidebar-post">
-			{{#foreach posts}}
+			<h4  class="widget-title">{{t "Recent Posts"}}</h4>
 
-                {{!-- Location: partials/post/post-card.hbs --}}
-                {{> "/post-card"}}
+			{{#get "posts" limit="3"}}
+			<ul>
 
-            {{/foreach}}
+			    {{#foreach posts}}
+			        <li>
+			            <a href="{{url}}">{{title}}</a>
+			        </li>
+			    {{/foreach}}
+
+			</ul>
+			{{/get}}
+
 			<h3><strong>Where I Shop</strong></h3>
 				<p><a href="https://www.shopbop.com" target="_blank">Shopbop</a></p>
 				<p><a href="https://www.revolve.com" target="_blank">Revolve</a></p>
