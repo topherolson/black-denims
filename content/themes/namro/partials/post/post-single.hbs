@@ -26,25 +26,27 @@
 			        <!-- <li>
 			            <a href="{{url}}">{{title}}</a>
 			        </li> -->
-					<div class="entry-content">
+					<div style="widget:100%;height:150px">
+						<div class="entry-content">
 
-				        <div class="entry-overlay"></div>
+					        <div class="entry-overlay"></div>
 
-				        {{#if feature_image}}
-				            <div class="entry-cover" style="background-image: url({{feature_image}})"></div>
-				        {{/if}}
+					        {{#if feature_image}}
+					            <div class="entry-cover" style="background-image: url({{feature_image}})"></div>
+					        {{/if}}
 
-				        <header class="entry-header">
-				            <a class="entry-link" href="{{url}}"></a>
-				            <h2 class="entry-title"><a href="{{url}}">{{title}}</a></h2>
-				            <div class="entry-meta">
-				                {{#foreach authors}}
-				                <!-- span class="byauthor">{{{t "By <a href='{href}'>{name}</a>" href=(url) name=name}}}</span> -->
-				                {{/foreach}}
-				            </div>
-				        </header>
+					        <header class="entry-header">
+					            <a class="entry-link" href="{{url}}"></a>
+					            <h2 class="entry-title"><a href="{{url}}">{{title}}</a></h2>
+					            <div class="entry-meta">
+					                {{#foreach authors}}
+					                <!-- span class="byauthor">{{{t "By <a href='{href}'>{name}</a>" href=(url) name=name}}}</span> -->
+					                {{/foreach}}
+					            </div>
+					        </header>
 
-				    </div>
+					    </div>
+					</div>
 			    {{/foreach}}
 
 			</ul>
