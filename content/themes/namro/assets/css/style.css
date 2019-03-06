@@ -1499,6 +1499,14 @@ a:active {
     float: right;
 }
 
+.sidebar-post h3{
+    text-transform: uppercase;
+}
+
+.sidebar-post p {
+    text-align: center;
+}
+
 @media screen and (max-width: 460px) {
     .sidebar-post
         {
