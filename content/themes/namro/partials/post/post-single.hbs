@@ -23,9 +23,12 @@
 			<ul>
 
 			    {{#foreach posts}}
-			        <li>
+			        <!-- <li>
 			            <a href="{{url}}">{{title}}</a>
-			        </li>
+			        </li> -->
+					{{#if feature_image}}
+			            <div class="entry-cover" style="background-image: url({{feature_image}})"></div>
+			        {{/if}}
 			    {{/foreach}}
 
 			</ul>
