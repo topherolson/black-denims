@@ -1497,8 +1497,6 @@ a:active {
 .sidebar-post {
     width: 30%;
     float: right;
-    border: 1px solid #ccc;
-    padding: 5px;
 }
 
 .sidebar-post h3{
