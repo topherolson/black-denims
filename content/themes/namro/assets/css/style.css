@@ -2257,9 +2257,12 @@ body.sidebar-slide .sidebar-overlay {
     height: 75px;
     display: block;
     border-radius: 99px;
+    float: left;
 }
 
 #brittyanyremy_ig p {
     float: left;
     text-align: left !important;
 }
+
+.clear {clear: both;}
