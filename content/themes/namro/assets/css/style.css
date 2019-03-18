@@ -2252,6 +2252,7 @@ body.sidebar-slide .sidebar-overlay {
 
 #brittyandremy_ig {
     background-image: url(../images/brittyandremy.jpg);
+    background-size: 75px 75px;
     width: 75px;
     height: 75px;
     display: block;
