@@ -2267,7 +2267,13 @@ body.sidebar-slide .sidebar-overlay {
     padding-top: 23px;
 }
 
-#follow_on_ig
+#follow_on_ig {
+    background-color: #111111;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
 
 #ig_logo {
     background-image: url(../images/ig_logo.png);
