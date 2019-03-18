@@ -2250,7 +2250,7 @@ body.sidebar-slide .sidebar-overlay {
 	}
 }
 
-#brittyanyremy_ig {
+#brittyandremy_ig {
     background-image: url(../images/brittyanyremy.jpg);
     width: 75px;
     height: 75px;
@@ -2260,4 +2260,5 @@ body.sidebar-slide .sidebar-overlay {
 
 #brittyanyremy_ig p {
     float: left;
+    text-align: left !important;
 }
