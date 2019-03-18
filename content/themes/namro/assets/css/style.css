@@ -2260,8 +2260,7 @@ body.sidebar-slide .sidebar-overlay {
     float: left;
 }
 
-#brittyanyremy_ig p {
-    float: left;
+#brittyanyremy_ig + p {
     text-align: left !important;
 }
 
