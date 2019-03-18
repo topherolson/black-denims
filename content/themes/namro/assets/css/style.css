@@ -2255,4 +2255,5 @@ body.sidebar-slide .sidebar-overlay {
     width: 75px;
     height: 75px;
     display: block;
+    border-radius: 99px;
 }
