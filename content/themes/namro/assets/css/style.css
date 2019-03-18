@@ -2261,8 +2261,12 @@ body.sidebar-slide .sidebar-overlay {
     margin-bottom: 10px;
 }
 
-#brittyanyremy_ig + p {
+#brittyandremy_ig + p {
     text-align: left !important;
+}
+
+#ig_logo {
+    background-image: url(../images/ig_logo.png);
 }
 
 .clear {clear: both;}
