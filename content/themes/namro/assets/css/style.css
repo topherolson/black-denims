@@ -2274,12 +2274,12 @@ body.sidebar-slide .sidebar-overlay {
     width: 100%;
     text-align: center;
     margin-top: 15px;
-    padding: 15px auto;
 }
 
 #follow_on_ig p {
     color: white!important;
     text-transform: none!important;
+    padding: 15px auto;
 }
 
 #ig_logo {
