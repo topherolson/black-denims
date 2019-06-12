@@ -2191,7 +2191,7 @@ body.sidebar-slide .sidebar-overlay {
 		width: 100%;
 	}
 	#header {
-		padding: 20px 0;
+		padding: 0px 0 20px;
 	}
 	#namro-slider {
 		/* display: none; */
