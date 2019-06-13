@@ -36,11 +36,6 @@
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
 
-    <div data-remodal-id="modal">
-        <button data-remodal-action="close" class="remodal-close"></button>
-        <h3 align="center" class="section-header">Thanks for Subscribing!</h3>
-        <p align="center">You are all set to recieve my updates!</p>
-    </div>
 
     <div data-remodal-id="modal-subscribe">
         <button data-remodal-action="close" class="remodal-close"></button>
@@ -55,17 +50,6 @@
             placeholder="yourmail@example.com"}}
         </p>
     </div>
-
-    <script>
-        if (!sessionStorage.isNewSession)
-            setTimeout(func, 4000);
-
-        function func() {
-            var inst = $('[data-remodal-id=modal-subscribe]').remodal();
-            inst.open();
-            sessionStorage.isNewSession = true;
-        }
-    </script>
 
     {{!-- Location: partials/footer.hbs --}}
     {{> "footer"}}
@@ -87,6 +71,17 @@
 
     {{!-- remodal script js --}}
     <script type="text/javascript" src="{{asset "js/remodal.js"}}"></script>
+
+    <script>
+        if (!sessionStorage.isNewSession)
+            setTimeout(func, 4000);
+
+        function func() {
+            var inst = $('[data-remodal-id=modal-subscribe]').remodal();
+            inst.open();
+            sessionStorage.isNewSession = true;
+        }
+    </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
