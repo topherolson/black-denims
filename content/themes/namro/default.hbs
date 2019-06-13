@@ -27,9 +27,6 @@
     {{ghost_head}}
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
 
-
-
-
 </head>
 <body class="{{body_class}}">
 
@@ -58,15 +55,6 @@
     </div>
 
     <script>
-        var urlParams = new URLSearchParams(window.location.search);
-
-        if (urlParams.has('subscribed')) {
-
-            var inst = $('[data-remodal-id=modal]').remodal();
-            inst.open();
-
-        }
-
         if (!sessionStorage.isNewSession)
             setTimeout(func, 4000);
 
