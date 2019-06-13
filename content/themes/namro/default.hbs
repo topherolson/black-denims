@@ -18,12 +18,15 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/ionicons.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/slick.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/remodal.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/remodal-default-theme.css"}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/remodal.js"></script>
 
 
 
@@ -35,6 +38,44 @@
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
+
+    <div data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h3 align="center" class="section-header">Thanks for Subscribing!</h3>
+        <p align="center">You are all set to recieve my updates!</p>
+    </div>
+
+    <div data-remodal-id="modal-subscribe">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h3 align="center" class="section-header">Subscribe for the latest Black Denims.</h3>
+        <p align="center">I won't bug you often, but when I do it will include awesome Shopping, Style and Mama tips!</p>
+
+        {{subscribe_form
+            form_class="subscribe-form"
+            input_class="subscribe-input"
+            button_class="subscribe_button"
+            placeholder="yourmail@example.com"}}
+    </div>
+
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.has('subscribed')) {
+
+            var inst = $('[data-remodal-id=modal]').remodal();
+            inst.open();
+
+        }
+
+        if (!sessionStorage.isNewSession)
+            setTimeout(func, 4000);
+
+        function func() {
+            var inst = $('[data-remodal-id=modal-subscribe]').remodal();
+            inst.open();
+            sessionStorage.isNewSession = true;
+        }
+    </script>
 
     {{!-- Location: partials/footer.hbs --}}
     {{> "footer"}}
