@@ -26,7 +26,7 @@
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
     <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/remodal.js"></script>
+
 
 
 
@@ -94,7 +94,9 @@
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
 
     {{!-- main script js --}}
-    <script type="text/javascript" src="{{asset "js/namro.js"}}"></script>
+
+    {{!-- remodal script js --}}
+    <script type="text/javascript" src="{{asset "js/remodal.js"}}"></script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
