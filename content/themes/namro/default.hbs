@@ -18,14 +18,14 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/ionicons.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/slick.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/remodal.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/remodal-default-theme.css"}}" />
     <!-- Custom Theme Style -->
     <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
 
     {{!-- This tag outputes SEO meta+structured data and other important settings --}}
     {{ghost_head}}
-    <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
-
-
+    <script src="//code.jquery.com/jquery-latest.js"></script>
 
 </head>
 <body class="{{body_class}}">
@@ -36,12 +36,27 @@
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
 
+
+    <div data-remodal-id="modal-subscribe">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h3 align="center" class="section-header">Subscribe for the latest Black Denims.</h3>
+        <p align="center">I won't bug you often, but when I do it will include awesome Shopping, Style and Mama tips!</p>
+
+        <p align="center">
+            {{subscribe_form
+            form_class="subscribe-form"
+            input_class="subscribe-input"
+            button_class="subscribe_button"
+            placeholder="yourmail@example.com"}}
+        </p>
+    </div>
+
     {{!-- Location: partials/footer.hbs --}}
     {{> "footer"}}
 
     {{!-- #Scripts --}}
     {{!-- jQuery v3.2.1 --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
 
     {{!-- slick.js --}}
     <script type="text/javascript" src="{{asset "js/slick.min.js"}}"></script>
@@ -54,6 +69,19 @@
 
     {{!-- main script js --}}
     <script type="text/javascript" src="{{asset "js/namro.js"}}"></script>
+    {{!-- remodal script js --}}
+    <script type="text/javascript" src="{{asset "js/remodal.js"}}"></script>
+
+    <script>
+        if (!sessionStorage.isNewSession)
+            setTimeout(func, 4000);
+
+        function func() {
+            var inst = $('[data-remodal-id=modal-subscribe]').remodal();
+            inst.open();
+            sessionStorage.isNewSession = true;
+        }
+    </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
     {{{block "scripts"}}}
