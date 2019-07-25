@@ -3,7 +3,7 @@
 
 {{!-- The main content area --}}
 <main id="main-content">
-    
+
     {{#tag}}
     <div class="post-header">
 
@@ -17,11 +17,11 @@
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    {{t "A collection of"}} {{plural ../pagination.total empty=(t 'No posts') singular=(t '1 post') plural=(t '% posts')}}
+                
                 {{/if}}
             </div>
         </div>
-        
+
     </div>
     {{/tag}}
 
@@ -38,9 +38,7 @@
 
         {{!-- Location: partials/pagination.hbs --}}
         {{> "pagination"}}
-        
+
     </div>
 
 </main>
-
-
